@@ -1,9 +1,9 @@
-name: Build and Push QR Generator Image
+name: Build and Push Image
 
 on:
   push:
     branches:
-      - main
+      - master
     tags:
       - 'v*'
 
@@ -39,6 +39,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
