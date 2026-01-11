@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Ensure data directory exists
-DATA_DIR = './data'
+DATA_DIR = '/data'
 os.makedirs(DATA_DIR, exist_ok=True)
 
 @app.route('/')
