@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - 'v*'
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -31,9 +28,6 @@ jobs:
           images: ghcr.io/${{ github.repository }}/qr-generator
           tags: |
             type=raw,value=latest
-            type=semver,pattern={{version}}
-            type=sha
-
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
