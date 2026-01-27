@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Flask = "==2.3.3"
+Flask = "==3.1.2"
 Pillow = "==12.1.0"
 qrcode = {extras = ["pil"], version = "==8.2"}
 
